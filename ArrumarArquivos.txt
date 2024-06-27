@@ -1,0 +1,36 @@
+1 - index.html
+    - mini rota, redirecionar para as outras páginas;
+
+2 - Arquivo novoUsuario.php:
+    - Apenas criar usuario caso não esteja logado;
+    - Arrumar o formulário para criar um novo usuário;
+    - Pegar valores digitados no formulário e passar para função "novoUsuario()";
+
+3 - Arquivo login.php
+    - fazer o formulário de login funcionar;
+    - ao fazer login, salvar ele em sessão para o resto do site funcionar;
+    - login funcionando, alterar as senhas "123" para uma "hash" da senha escolhida;
+
+4 - Nova postagem em "perfil.php":
+    - Mostrar nome e foto do usuario dono do perfil (não do perfil logado);
+    - Apenas deixar publicar algo caso a pagina de perfil aberto seja do usuário que está logado;
+
+5 - Postagens no arquivo feed.php:
+    - Dado o modelo de uma postagem (html) presente no arquivo, mostrar automaticamente todas as postagens existentes no banco;
+    - Para que isso seja possível, você precisa arrumar a função "gerarPostCard()" do arquivo Postagem.php e passar por parâmetro todos os dados retornados do banco (de cada publicacao);
+    - Dentro desta função você deverá adicionar tudo o que for necessário para fazer a postagem do banco ficar parecida com a do modelo, porém com seus próprios dados;
+    - Em seguida, lembre-se que ao clicar em um post ele deve abrir o arquivo "verPost.php" passando seu código pela url e asism abrir o post esolhido;
+
+6 - Post em "verPost.php":
+    - Ao abrir o post escolhido ele vai te levar para a página "verPost.php";
+    - Neste arquivo você precisa mostrar os comentários do post escolhido;
+    - Conseguindo fazer isso, agora arrume a função "carregarComentarios()" do arquivo "Postagem.php" para que apenas mostre a opção de apagar para quem esteja logado;
+    - Em seguida arrume botão de curtir para que ele funcione (chamar arquivo like.php);
+   
+7 - Arquivo header.php:
+    - Fazer os botões alternarem dinâmicamente conforme o status (logado / não logado);
+    - Usuario Logado, mostrar: Feeds, Perfil do Usuario, Sair;
+    - Não Logado, mostar: Feeds, Login, Novo Usuario;
+    - Botão Meu Perfil: abrir automaticamente a página do usuário logado;
+    - Mostrar nome e foto do usuario logado (quando logado);
+    - Adicionar header.php onde faz sentido;

@@ -1,0 +1,243 @@
+body {
+  background-color: rgb(77, 75, 75);
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  margin: 0;              
+  margin-top: 20px;
+}
+
+/* Style the navbar 05 */
+.navbar {
+  background-color: #eee;
+  padding: 10px 20px;
+  display: flex;
+  border-radius: 5px; 
+  justify-content: center; 
+}
+
+/* Style the buttons */
+.nav-button {
+  background-color: #007bff;
+  color: white;      
+  border: none;       
+  padding: 10px 15px; 
+  margin: 5px;        
+  border-radius: 5px; 
+  cursor: pointer;    
+}
+
+/* Optional: Add hover effect to buttons */
+.nav-button:hover {
+  background-color: #0069d9;  /* Darken blue on hover */
+}
+
+
+/* Style the card */
+.social-card {
+  background-color: #fff; 
+  border-radius: 5px;     
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);  
+  margin-bottom: 20px;     
+  width: 350px; 
+  display: flex;  /* Make card a flex container for vertical layout */
+  flex-direction: column;  /* Arrange content vertically */           
+  
+}
+
+/* Style the image inside the card */
+.social-card img {
+  width: 100%;  
+  border-top-left-radius: 5px; 
+  border-top-right-radius: 5px;
+}
+
+
+/* Style the user info section */
+.social-card-user-info {
+  display: flex;  /* Arrange user info elements horizontally */
+  align-items: center;  /* Align user info elements vertically */
+  padding: 3px;  /* Add some padding for user info */
+  
+}
+
+/* Style the user profile picture */
+.social-card-user-info img {
+  border-radius: 50%;
+  margin-right: 10px;  /* Add some margin from user name */
+  padding-left: 20px;
+}
+
+
+
+/* Style the card title */
+.social-card-title {
+  font-weight: bold; 
+  margin-bottom: 5px;
+}
+
+/* Style the card text */
+.social-card-text {
+  color: #333;  
+}
+
+/* Style the card container */
+.social-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 15px;  
+  width: 80%;
+}
+
+/* Style the social card (styles remain the same from previous example) */
+.social-card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 300px;
+}
+
+/* Style the image inside the card (styles remain the same) */
+.social-card img {
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* Style the card content area (styles remain the same) */
+.social-card-content {
+  padding: 8px;
+  flex: 1; 
+}
+
+/* Style the card title (styles remain the same) */
+.social-card-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Style the card text (styles remain the same) */
+.social-card-text {
+  color: #333;
+}
+
+
+
+.single-post-container {
+  
+  margin: 0 auto; /* Center the single post view horizontally */
+  padding: 20px; /* Add some padding for the single post content */
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(255, 0, 0, 0.1);
+  padding: 20px;
+  margin: 0 auto;  /* Maintain centering from previous example */
+  width: 80%;
+  max-width: 700px;
+  position: relative;
+}
+
+.single-post-container h1 {
+  margin-bottom: 15px;
+}
+
+.single-post-container p {
+  line-height: 1.5; /* Adjust line spacing for better readability */
+}
+
+.single-post-container .post img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}
+
+
+.btn-blue {
+  background-color: #007bff;  /* Blue color */
+  color: #fff;  /* White text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;  /* Indicate clickable button */
+}
+
+.btn-secondary {
+  background-color: #6c757d;  /* Gray color */
+  color: #fff;  /* White text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;  /* Indicate clickable button */
+}
+
+.btn-success {
+  background-color: #28a745;  /* Green color */
+  color: #fff;  /* White text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;  /* Indicate clickable button */
+}
+
+/* Red button */
+.btn-red {
+  background-color: #c0392b;  /* Red color */
+  color: #fff;  /* White text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;  /* Indicate clickable button */
+}
+
+/* Dark button */
+.btn-dark {
+  background-color: #212529;  /* Dark gray color */
+  color: #fff;  /* White text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;  /* Indicate clickable button */
+}
+
+.social-card-container .social-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Combine input and button styles */
+.input-button {
+  display: flex;
+  align-items: center; /* Vertically align content */
+  overflow: hidden; /* Prevent text overflow outside the button */
+  border: 1px solid #ccc; /* Common border for both elements */
+  border-radius: 5px; /* Consistent rounded corners */
+  cursor: pointer; /* Indicate clickable behavior */
+}
+
+/* Style the input field within the combined element */
+.input-button input[type="text"] {
+  flex: 1; /* Allow input to fill remaining space */
+  border: none; /* Remove default input border */
+  padding: 10px; /* Add padding for spacing */
+  font-size: 16px; /* Set font size */
+}
+
+/* Style the button within the combined element (optional) */
+.input-button button {
+  background-color: #4CAF50; /* Set button background color */
+  color: white; /* Set button text color */
+  padding: 10px 20px; /* Adjust padding for button area */
+  border: none; /* Remove default button border (optional) */
+  font-size: 16px; /* Set button text size */
+  cursor: pointer; /* Maintain clickable behavior */
+}
+
+/* Example usage */
+.search-box {
+  margin-bottom: 15px;
+}
