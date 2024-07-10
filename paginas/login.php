@@ -9,6 +9,31 @@
 </head>
 <body>
 
+
+
+<?php
+    
+//INICIAR A SESSÃO PARA QUE APENAS POSSA CRIAR USUARIO CASO NÃO ESTEJA LOGADO
+    session_start();    
+    require_once "../config/banco.php";
+
+
+    $usuario = $_POST['usuario'] ?? null;
+    $senha = $_POST['senha'] ?? null;
+
+
+    if (!is_null($usuario) && !is_null($senha)) {
+        if(fazerLogin($usuario, $senha)){
+            header("Location: feed.php");
+        }else{
+            echo"erro";
+        }
+    }
+
+    //ECHO PARA ENCONTRAR HASH DA SENHA DO USUARIO
+    //echo password_hash("123", PASSWORD_DEFAULT);
+?>
+
     <nav class="navbar">
         <a href="./feed.php"><button class="nav-button btn-secondary">Feed</button></a>
         <a href="./novoUsuario.php"><button class="nav-button btn-dark">New User</button></a>
@@ -36,23 +61,3 @@
 
 </body>
 </html>
-
-<?php
-session_start();
-
-$usuario = $_POST['usuario'] ?? null;
-$senha = $_POST['senha'] ?? null;
-
-$usu = $_SESSION["usuario"] ?? null;
-
-if (!is_null($usu)) {
-    // Usuário já está logado
-    header("Location:/modelo-final-03b/paginas/feed.php"); // Redirecionar para a página de feed
-    exit();
-} else {
-    require_once "../config/banco.php";
-    fazerLogin($usuario, $senha);
-}
-
-$banco->close();
-?>

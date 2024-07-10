@@ -14,7 +14,10 @@
     // FUNÇÃO DE USUARIO --------------------------------------------------------------------------
     function novoUsuario($usuario, $nome, $senha, $image = null){
         global $banco;
-        $q = "INSERT INTO usuarios(usuario, nome, senha, imagem) VALUES ('$usuario', '$nome', '$senha', '$image')";
+
+        //TROCAR A SENHA NORMAL PARA ENVIAR SENHA COM HASH PARA O BANCO DE DADOS
+        $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+        $q = "INSERT INTO usuarios(usuario, nome, senha, imagem) VALUES ('$usuario', '$nome', '$senhaHash', '$image')";
         $banco->query($q);
     }
     
@@ -38,9 +41,14 @@
 
             $objUsuario = $busca->fetch_object();
 
-            if($senha === $objUsuario->senha){
+//MUDAR O IF PARA O IF DA HASH
+            //if($senha === $objUsuario->senha){
+            if (password_verify($senha ,$objUsuario->senha)){
                 echo "Login :)";
+
+                //SALVA O USUARIO NA SESSÃO
                 Usuario::salvarUsuarioNaSessao($objUsuario);
+                ///////////////////////////////////////////
                 return true;
             }else{
                 echo "Senha Inválida :/";

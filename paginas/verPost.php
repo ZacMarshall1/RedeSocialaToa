@@ -12,6 +12,7 @@
     <?php 
         require_once "../Model/Postagem.php";
         require_once "../config/banco.php";
+        include_once "../header.php";
 
         $codPostagem = $_GET["cod"] ?? null;
         $novoComentario = $_POST["comentario"] ?? null;
@@ -26,7 +27,7 @@
 
     <main>
         <div style="width: 100%;">
-       
+        
             <!-- Ver apenas o post escolhido -->
             <div class="single-post-container">
                 <?php 
@@ -37,7 +38,11 @@
             <div class="single-post-container" style="margin-top: 20px;">
             
                 <!-- Carregar todos os comentários dos posts -->
-
+                
+                <?php 
+                    //PUXAR FUNÇÃO CARREGARCOMENTARIOS DA POSTAGEM.PHP
+                    Postagem::carregarComentarios($listaComentarios);
+                ?>
                 <!-- Adicionar novo comentário -->
                 <form action="" method="post">
                     <input type="text" name="comentario">

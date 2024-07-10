@@ -27,7 +27,8 @@
                 if (file_exists($target_file)) {
 
                     echo "Imagem existe.";
-                    return null;
+                    //CASO IMAGEM JA EXISTA NO BANCO DE DADOS, ENVIAR DE QUALQEUR FORMA
+                    return $_FILES["imagemPost"]["name"];;
 
                 } else {
                     
